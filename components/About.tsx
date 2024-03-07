@@ -5,11 +5,12 @@ import AboutModel from "@public/images/about_pic.png";
 import { aboutFloatText, resumeData } from "@constant";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 const About = () => {
   return (
     <div id="about" className="w-full">
-      <div className="relative max-w-[550px] mx-auto py-16 flex items-center flex-col gap-5 justify-center px-10 ">
+      <div className="flexColCenter relative max-w-[550px] mx-auto py-16 gap-5 px-10 ">
         <motion.div
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
@@ -42,7 +43,7 @@ const About = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-[0.8rem] text-gray-300 leading-6 tracking-wide text-center"
+          className="text-sm text-gray-300 leading-6 tracking-wide text-center"
         >
           Greetings! I'm Reynaldo Bocaling Jr, originally from Tabuating, San
           Leonardo, Nueva Ecija. Armed with a degree in Web System Technology,
@@ -52,7 +53,7 @@ const About = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="text-[0.8rem] text-gray-300 leading-6 tracking-wide text-center"
+          className="text-sm text-gray-300 leading-6 tracking-wide text-center"
         >
           I specialize in frontend development, with a keen passion for design.
           I thrive on exploring the MERN stack, particularly as a dedicated
@@ -66,11 +67,8 @@ const About = () => {
           className="flex flex-col gap-5 mt-3"
         >
           {resumeData.map((item, index) => (
-            <div
-              key={index}
-              className="flex items-center gap-10 text-white text-sm"
-            >
-              <div className="flex items-center gap-3 ">
+            <div key={index} className="flexStart gap-10 text-white text-sm">
+              <div className="flexStart gap-3 ">
                 <item.icon />
                 {item.title}
               </div>
@@ -83,9 +81,11 @@ const About = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          href="../public/images/cv.pdf"
-          download="Resume"
-          className="bg-[#6636ea] text-white text-sm py-[10px] px-7 rounded-full shadow-lg shadow-[#1a1b1d] mt-5"
+          href="/public/cv.pdf"
+          className="btn-violet py-[10px] px-7 rounded-full shadow-lg shadow-[#1a1b1d] mt-5"
+          target="_blank"
+          rel="noopener noreferrer"
+          download
         >
           Download Resume
         </motion.a>

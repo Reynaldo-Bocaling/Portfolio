@@ -27,7 +27,7 @@ const Project = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col items-center gap-2 mb-3"
+          className="flexColCenter gap-2 mb-3"
         >
           <small className="text-[#7443f9] font-semibold tracking-wide">
             My Work
@@ -41,7 +41,7 @@ const Project = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex items-center justify-center gap-7 mb-3"
+          className="flexCenter gap-7 mb-3"
         >
           {projectTab.map((item) => (
             <button
@@ -88,7 +88,7 @@ const Project = () => {
             }}
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
-            className="mySwiper flex items-center justify-center px-7"
+            className="mySwiper flexCenter px-7"
             initialSlide={projectTab.indexOf(activeTab)}
           >
             {projectFilter.map((item, index) => (
@@ -99,7 +99,7 @@ const Project = () => {
                     alt="_"
                     className="object-cover h-[300px] w-full rounded-lg"
                   />
-                  <div className="flex items-center justify-between px-3 py-2">
+                  <div className="flexBetween px-3 py-2">
                     <div className="flex flex-col gap-2">
                       <div className="max-w-full md:max-w-[170px] w-full">
                         <span className="capitalize text-white font-semibold tracking-wide">
@@ -118,7 +118,7 @@ const Project = () => {
                         </div>
                       </div>
                     </div>
-                    <div className="flex flex-col items-start gap-1">
+                    <div className="flexColStart gap-1">
                       <small className="text-gray-300 tracking-wide">
                         Date: {item.date}
                       </small>

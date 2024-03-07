@@ -34,10 +34,6 @@ const config: Config = {
           50: "#FEC601",
         },
       },
-      backgroundImage: {
-        "bg-img-1": "url('/public/images/fb.png')",
-        // "bg-img-2": "url('/img-2.png')",
-      },
       screens: {
         xs: "400px",
         "3xl": "1680px",

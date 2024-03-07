@@ -17,7 +17,7 @@ const Certificate = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col items-center gap-2 mb-7"
+          className="flexColCenter gap-2 mb-7"
         >
           <small className="text-[#7443f9] font-semibold tracking-wide">
             My Achievement
@@ -70,7 +70,7 @@ const Certificate = () => {
           ))}
         </div>
 
-        <div className="slide_text text-[0.7rem] text-gray-500 absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-2">
+        <div className="slide_text slideTextAnimation">
           Swipe left or right to explore more!
         </div>
       </div>

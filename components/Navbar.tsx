@@ -5,11 +5,10 @@ import Logo from "@public/logo/logo.png";
 import { HiMenuAlt4, HiX } from "react-icons/hi";
 import { AnimatePresence, motion } from "framer-motion";
 import { menuVariant, mobileLinkVariant, containerVariants } from "./Animate";
-import fb from "@public/images/fb.png";
-import ig from "@public/images/ig.png";
-import gmail from "@public/images/gmail.png";
 import { navLinks } from "@constant";
 import Image from "next/image";
+import { FaInstagram, FaFacebookF, FaGithub } from "react-icons/fa";
+
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = useState<boolean>(false);
   const [scroll, setScroll] = useState<boolean>(false);
@@ -20,6 +19,7 @@ const Navbar = () => {
     });
   }, []);
 
+  const socialMedia = [FaFacebookF, FaInstagram, FaGithub];
   return (
     <motion.div
       initial={{ y: -25 }}
@@ -30,7 +30,7 @@ const Navbar = () => {
         scroll && "blur_effect"
       } fixed w-full top-0 left-0 z-50 shadow-md2`}
     >
-      <div className="max-w-[1124px] mx-auto py-3 px-6 flex items-center justify-between">
+      <div className="flexBetween max-w-[1124px] mx-auto py-3 px-6">
         <Image src={Logo} alt="Logo" width={50} />
         <ul className="hidden md:flex items-center gap-7">
           {navLinks.map(({ label, path }, index) => {
@@ -49,33 +49,17 @@ const Navbar = () => {
 
         <button
           onClick={() => setToggleMenu(true)}
-          className="flex md:hidden items-center justify-center h-[40px] w-[40px] bg-white rounded-full shadow-lg"
+          className="flexCenter h-[40px] w-[40px] bg-white rounded-full shadow-lg md:hidden"
         >
           <HiMenuAlt4 size={25} />
         </button>
 
         <div className="hidden md:flex items-center gap-4 ">
-          <Image
-            src={fb}
-            alt="_"
-            width={30}
-            height={30}
-            className="shadow-lg"
-          />
-          <Image
-            src={ig}
-            alt="_"
-            width={30}
-            height={30}
-            className="shadow-lg"
-          />
-          <Image
-            src={gmail}
-            alt="_"
-            width={30}
-            height={30}
-            className="shadow-lg"
-          />
+          {socialMedia.map((Item, index) => (
+            <div key={index} className="contentSocialMedia">
+              <Item size={20} />
+            </div>
+          ))}
         </div>
 
         {/* mobile navbar */}
@@ -92,13 +76,13 @@ const Navbar = () => {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
-                className="mt-2 flex items-center justify-between py-3 px-6"
+                className="flexBetween mt-2 py-3 px-6"
               >
                 <Image src={Logo} alt="Logo" width={30} />
 
                 <button
                   onClick={() => setToggleMenu(false)}
-                  className="flex items-center justify-center h-[40px] w-[40px] bg-white rounded-full"
+                  className="flexCenter h-[40px] w-[40px] bg-white rounded-full"
                 >
                   <HiX size={22} />
                 </button>
@@ -117,7 +101,7 @@ const Navbar = () => {
                         <a
                           href={path}
                           onClick={() => setToggleMenu(false)}
-                          className="capitalize text-xl text-white tracking-wider opacity-[0.6] hover:opacity-[1]"
+                          className="capitalize text-xl font-light text-white tracking-wider opacity-[0.6] hover:opacity-[1]"
                         >
                           {label}
                         </a>
@@ -127,10 +111,12 @@ const Navbar = () => {
                 })}
               </motion.ul>
 
-              <div className="absolute bottom-10 flex items-center justify-center gap-7 w-full">
-                <Image src={fb} alt="_" width={50} className="shadow-lg" />
-                <Image src={ig} alt="_" width={50} />
-                <Image src={gmail} alt="_" width={50} />
+              <div className="flexCenter mt-20 gap-7 w-full">
+                {socialMedia.map((Item, index) => (
+                  <div key={index} className="contentSocialMedia">
+                    <Item size={20} />
+                  </div>
+                ))}
               </div>
             </motion.div>
           )}

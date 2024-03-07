@@ -2,7 +2,6 @@
 
 import React from "react";
 import react from "@public/images/skills_img/react.png";
-import tailwind from "@public/images/skills_img/tailwindcss.png";
 import bootstrap from "@public/images/skills_img/bootstrap.png";
 import angular from "@public/images/skills_img/angular.png";
 import jquery from "@public/images/skills_img/jquery.png";
@@ -11,6 +10,48 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const FloatingContent = () => {
+  const floatingIcon = [
+    {
+      icon: react,
+      initial: { y: 0, opacity: 0 },
+      whileInView: { x: [10, 0], opacity: 1 },
+      transition: { duration: 1 },
+      style: "flexCenter absolute -left-20 top-1 p-2 bg-white rounded-full",
+    },
+    {
+      icon: angular,
+      initial: { y: 0, opacity: 0 },
+      whileInView: { y: [-15, 0], opacity: 1 },
+      transition: { duration: 1 },
+      style:
+        "flexCenter absolute -left-2 md:-left-5 border bottom-2 p-2 bg-white  shadow-lg rounded-full",
+    },
+    {
+      icon: bootstrap,
+      initial: { y: 0, opacity: 0 },
+      whileInView: { y: [-15, 0], opacity: 1 },
+      transition: { duration: 1 },
+      style:
+        "flexCenter absolute left-8 -top-2 md:-top-16 p-2 bg-white  shadow-lg rounded-full",
+    },
+    {
+      icon: jquery,
+      initial: { y: 0, opacity: 0 },
+      whileInView: { y: [15, 0], opacity: 1 },
+      transition: { duration: 1 },
+      style:
+        "flexCenter absolute -right-16 bottom-12 p-2 bg-white  shadow-lg rounded-full",
+    },
+    {
+      icon: js,
+      initial: { y: 0, opacity: 0 },
+      whileInView: { x: [15, 0], opacity: 1 },
+      transition: { duration: 1 },
+      style:
+        "flexCenter absolute right-3 -top-5 p-2 bg-white  shadow-lg rounded-full",
+    },
+  ];
+
   return (
     <div id="floatContent" className="w-full bg-[#2e2e2e]">
       <motion.div
@@ -31,51 +72,24 @@ const FloatingContent = () => {
             into reality. Reach out and let's create something amazing together!
           </small>
         </div>
-        <button className="bg-[#6636ea] text-white text-sm py-3 px-7 rounded-full shadow-xl shadow-[#dfddf9] mt-5">
+        <button className="btn-violet py-3 px-7 rounded-full shadow-xl shadow-[#dfddf9] mt-5">
           Contact Me
         </button>
 
         {/* float image */}
-        <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ x: [10, 0], opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute -left-20 top-1 flex items-center justify-center p-2 bg-white rounded-full"
-        >
-          <Image src={react} alt="" className="w-[45px]" />
-        </motion.div>
-        <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ y: [-15, 0], opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute -left-2 md:-left-5 border bottom-2 flex items-center justify-center p-2 bg-white  shadow-lg rounded-full"
-        >
-          <Image src={angular} alt="" className="w-[25px]" />
-        </motion.div>
-        <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ y: [-15, 0], opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute left-8 -top-2 md:-top-16 flex items-center justify-center p-2 bg-white  shadow-lg rounded-full"
-        >
-          <Image src={bootstrap} alt="" className="w-[25px]" />
-        </motion.div>
-        <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ y: [15, 0], opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute -right-16 bottom-12 flex items-center justify-center p-2 bg-white  shadow-lg rounded-full"
-        >
-          <Image src={jquery} alt="" className="w-[35px]" />
-        </motion.div>
-        <motion.div
-          initial={{ y: 0, opacity: 0 }}
-          whileInView={{ x: [15, 0], opacity: 1 }}
-          transition={{ duration: 1 }}
-          className="absolute right-3 -top-5 flex items-center justify-center p-2 bg-white  shadow-lg rounded-full"
-        >
-          <Image src={js} alt="" className="w-[25px]" />
-        </motion.div>
+        {floatingIcon.map(
+          ({ initial, whileInView, transition, style, icon }, index) => (
+            <motion.div
+              key={index}
+              initial={initial}
+              whileInView={whileInView}
+              transition={transition}
+              className={style}
+            >
+              <Image src={icon} alt="" className="w-[25px]" />
+            </motion.div>
+          )
+        )}
       </motion.div>
     </div>
   );

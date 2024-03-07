@@ -1,10 +1,8 @@
 import certificate1 from "@public/images/certificate_img/certificate1.png";
 import certificate2 from "@public/images/certificate_img/certificate2.png";
-
-import education from "@public/images/projects_img/interntrack.jpg";
+import education from "@public/images/projects_img/education.jpg";
 import interntrack from "@public/images/projects_img/interntrack.jpg";
 import headphone from "@public/images/projects_img/headphone.jpg";
-
 import {
   FaPhoneAlt,
   FaInstagram,
@@ -14,11 +12,9 @@ import {
   FaReact,
   FaNodeJs,
   FaBootstrap,
-  FaPhp,
-  FaAngular,
   FaGithub,
 } from "react-icons/fa";
-import { DiJavascript, DiJqueryLogo } from "react-icons/di";
+import { DiJavascript } from "react-icons/di";
 import {
   SiTypescript,
   SiPrisma,
@@ -31,8 +27,9 @@ import { BiLogoGmail } from "react-icons/bi";
 import { HiMiniUser } from "react-icons/hi2";
 import { RiSendPlaneFill } from "react-icons/ri";
 import { MdLocationPin } from "react-icons/md";
+import { TbBrandNextjs } from "react-icons/tb";
+import { SiExpress } from "react-icons/si";
 
-import react from "@public/images/skills_img/react.png";
 import angular from "@public/images/skills_img/angular.png";
 import tailwind from "@public/images/skills_img/tailwindcss.png";
 import bootstrap from "@public/images/skills_img/bootstrap.png";
@@ -42,68 +39,94 @@ import js from "@public/images/skills_img/js.png";
 
 export const Skills = [
   {
+    label: "HTML",
     icon: FaHtml5,
     color: "hover:text-orange-500",
+    size: 40,
   },
   {
+    label: "CSS",
     icon: FaCss3,
     color: "hover:text-blue-500",
+    size: 40,
   },
   {
+    label: "JAVASCRIPT",
     icon: DiJavascript,
     color: "hover:text-yellow-500",
+    size: 40,
   },
   {
+    label: "TYPESCRIPT",
     icon: SiTypescript,
     color: "hover:text-blue-500",
+    size: 35,
   },
   {
+    label: "REACT JS",
     icon: FaReact,
     color: "hover:text-blue-400",
+    size: 40,
   },
   {
-    icon: FaAngular,
-    color: "hover:text-red-600",
-  },
-  {
-    icon: DiJqueryLogo,
+    label: "NEXT JS",
+    icon: TbBrandNextjs,
     color: "hover:text-blue-400",
+    size: 40,
   },
   {
-    icon: FaBootstrap,
-    color: "hover:text-purple-600",
-  },
-  {
+    label: "TAILWINDCSS",
     icon: SiTailwindcss,
     color: "hover:text-cyan-400",
+    size: 40,
   },
   {
+    label: "MUI",
     icon: SiMui,
     color: "hover:text-blue-500",
+    size: 35,
   },
   {
+    label: "BOOTSTRAP",
+    icon: FaBootstrap,
+    color: "hover:text-purple-600",
+    size: 40,
+  },
+  {
+    label: "EXPRESS JS",
+    icon: SiExpress,
+    color: "hover:text-green-400",
+    size: 40,
+  },
+  {
+    label: "NODE JS",
     icon: FaNodeJs,
     color: "hover:text-green-400",
+    size: 40,
   },
   {
-    icon: FaPhp,
-    color: "hover:text-indigo-600",
-  },
-  {
+    label: "PRISMA",
     icon: SiPrisma,
     color: "hover:text-green-500",
+    size: 40,
   },
   {
     icon: GrMysql,
     color: "hover:text-blue-500",
+    size: 40,
+    label: "MYSQL",
   },
   {
     icon: SiMongodb,
     color: "hover:text-green-400",
+    size: 40,
+    label: "MONGODB",
   },
   {
     icon: FaGithub,
     color: "hover:text-purple-600",
+    size: 40,
+    label: "GITHUB",
   },
 ];
 

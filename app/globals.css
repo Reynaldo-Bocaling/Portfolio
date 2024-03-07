@@ -23,28 +23,12 @@ body {
 }
 
 @layer utilities {
-  .btn_white {
-    @apply border-white bg-white px-8 py-3 text-green-50
-  }
-
-  .btn_white_text {
-    @apply border-white bg-white px-8 py-3 text-gray-90
-  }
-
-  .btn_green {
-    @apply border-green-50 bg-green-50 px-8 py-5 text-white
-  }
-
-  .btn_dark_green {
-    @apply bg-green-90 px-8 py-4 text-white transition-all hover:bg-black
-  }
-
-  .btn_dark_green_outline {
-    @apply border-gray-20 bg-green-90 px-8 py-5 text-white
+  .btn-violet {
+    @apply bg-[#6636ea] text-white text-sm
   }
 
   .max-container {
-    @apply mx-auto max-w-[1440px];
+    @apply mx-auto max-w-[1124px];
   }
 
   .padding-container {
@@ -65,6 +49,22 @@ body {
 
   .flexEnd {
     @apply flex items-center justify-end;
+  }
+
+  .flexColStart {
+    @apply flex flex-col items-start justify-center
+  }
+
+  .flexColCenter {
+    @apply flex flex-col items-center justify-center
+  }
+
+  .flexColEnd {
+    @apply flex flex-col items-end justify-center
+  }
+
+  .flexColBetween {
+    @apply flex flex-col items-center justify-between
   }
 
   /* FONTS */
@@ -135,7 +135,20 @@ body {
   .bold-16 {
     @apply text-[16px] font-[700];
   }
+
+  .slide_text {
+    @apply text-[0.7rem] text-gray-500 absolute -bottom-12 left-1/2 -translate-x-1/2 flex items-center gap-2
+  }
+
+  .contactTextContainer {
+    @apply bg-white rounded-lg py-8 px-7 flex flex-col md:flex-row gap-12 md:gap-5 overflow-x-hidden
+  }
+
+  .contentSocialMedia {
+    @apply bg-[#2e2e2e] shadow-lg text-white w-[35px] h-[35px] rounded-full flex items-center justify-center
+  }
 }
+
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
@@ -186,7 +199,7 @@ body {
   background: #fff;
 }
 
-.slide_text {
+.slideTextAnimation {
   animation: slideIn 1.5s ease-in-out infinite;
 }
 

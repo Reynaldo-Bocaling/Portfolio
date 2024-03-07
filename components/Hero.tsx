@@ -25,8 +25,8 @@ const Home = () => {
       id="home"
       className=" pt-[80px] md:pt-[100px] w-full overflow-hidden "
     >
-      <div className="max-w-[1124px] mx-auto flex flex-col items-center justify-between md:flex-row px-7  gap-5">
-        <div className="max-w-[440px] flex flex-col items-start gap-7 mb-5">
+      <div className="flexColBetween max-container md:flex-row px-7  gap-5 md:px-10 lg:px-14">
+        <div className="flexColStart max-w-[440px] gap-7 mb-5">
           <span className="homefloatText text-[#6636ea] font-bold md:text-lg">
             Do You Know Me?
           </span>
@@ -37,7 +37,7 @@ const Home = () => {
               width={70}
               className="absolute -mt-3"
             />
-            <p className=" text-[2.1rem] md:text-[2.7rem] text-white font-bold tracking-wider leading-[3.2rem] first-letter:ml-[4rem]">
+            <p className=" text-[2.1rem] md:text-[2.7rem] text-white font-bold tracking-wide leading-[3.2rem] first-letter:ml-[4rem]">
               I'm Reynaldo Bocaling Jr.
             </p>
           </div>
@@ -51,18 +51,18 @@ const Home = () => {
             animate="animation"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
-            className="mx-auto md:mx-0 bg-[#6636ea] text-white text-sm py-2 px-7 rounded-full shadow-lg shadow-[#3d3d3d] mt-3 md:mt-5"
+            className="btn-violet mx-auto md:mx-0 py-3 px-9 rounded-full shadow-lg shadow-[#3d3d3d] mt-3 md:mt-5"
           >
-            Contact Me
+            <a href="#contact">Contact Me</a>
           </motion.button>
         </div>
 
-        <div className="relative mt-4">
+        <div className="relative mt-4 md:mt-10 lg:mt-14">
           <motion.div
             initial={{ rotate: "-90deg" }}
             animate={{ rotate: "-15deg" }}
             transition={{ duration: 7, type: "spring" }}
-            className="animae h-[320px] w-[320px] absolute -left-5 -top-3 bg-bslue-400 rounded-full border border-gray-500 border-dashed md:h-[500px] md:w-[500px]"
+            className="animae h-[320px] w-[320px] absolute -left-5 -top-3 bg-bslue-400 rounded-full border border-gray-500 border-dashed md:h-[450px] md:w-[450px]"
           >
             <div className="relative w-full h-full rounded-full">
               {skillModel.map(({ icon, style, size }, index) => (
@@ -78,7 +78,7 @@ const Home = () => {
           <Image
             src={HomeModel}
             alt="Home img"
-            className="relative z-30 max-w-[280px] md:max-w-[450px]"
+            className="relative z-30 max-w-[280px] md:max-w-[400px]"
             loading="lazy"
           />
         </div>

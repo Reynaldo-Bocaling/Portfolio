@@ -13,7 +13,7 @@ const Contact = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          className="flex flex-col items-center gap-2 mb-5"
+          className="flexColCenter gap-2 mb-5"
         >
           <small className="text-[#7443f9] font-semibold tracking-wide">
             Get In Touch
@@ -21,7 +21,7 @@ const Contact = () => {
           <span className="text-2xl font-bold text-white">Contact Me</span>
         </motion.div>
 
-        <div className="bg-white rounded-lg py-8 px-7 flex flex-col md:flex-row gap-12 md:gap-5 overflow-x-hidden">
+        <div className="contactTextContainer">
           <motion.div
             initial={{ x: 0, opacity: 0 }}
             whileInView={{ x: [-50, 0], opacity: 1 }}
@@ -35,19 +35,16 @@ const Contact = () => {
               message. Let's turn your ideas into reality!
             </p>
 
-            <div className="flex flex-col items-start gap-7 mt-5">
+            <div className="flexColStart gap-7 mt-5">
               {personalInfo.map((item, index) => (
-                <div key={index} className="flex items-center gap-5">
+                <div key={index} className="flexCenter gap-5">
                   <item.icon size={18} />
                   <span className="text-sm font-semibold">{item.text}</span>
                 </div>
               ))}
-              <div className=" flex items-center gap-3 pl-1">
+              <div className=" flexCenter gap-3 pl-1">
                 {socialInfo.map((item, index) => (
-                  <div
-                    key={index}
-                    className="bg-[#2e2e2e] shadow-lg text-white w-[35px] h-[35px] rounded-full flex items-center justify-center"
-                  >
+                  <div key={index} className="contentSocialMedia">
                     <item.icon />
                   </div>
                 ))}
