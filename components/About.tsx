@@ -5,7 +5,6 @@ import AboutModel from "@public/images/about_pic.png";
 import { aboutFloatText, resumeData } from "@constant";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
 
 const About = () => {
   return (
