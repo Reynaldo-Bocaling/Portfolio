@@ -51,7 +51,7 @@ const Home = () => {
             animate="animation"
             whileHover={{ scale: 1.1 }}
             transition={{ duration: 0.3 }}
-            className="mx-auto md:mx-0 bg-[#6636ea] text-white text-sm py-2 px-7 rounded-full shadow-lg shadow-[#3d3d3d] mt-3 md:mt-5"
+            className="mx-auto md:mx-0 bg-red-500 text-white text-sm py-2 px-7 rounded-full shadow-lg shadow-[#3d3d3d] mt-3 md:mt-5"
           >
             Contact Me
           </motion.button>
