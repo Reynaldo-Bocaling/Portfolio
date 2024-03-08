@@ -64,7 +64,7 @@ const Project = () => {
         >
           <Swiper
             spaceBetween={5}
-            loop={true}
+            loop={false}
             autoplay={{
               delay: 2500,
               disableOnInteraction: false,

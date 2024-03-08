@@ -1,8 +1,10 @@
 import certificate1 from "@public/images/certificate_img/certificate1.png";
 import certificate2 from "@public/images/certificate_img/certificate2.png";
+
 import education from "@public/images/projects_img/education.jpg";
 import interntrack from "@public/images/projects_img/interntrack.jpg";
 import headphone from "@public/images/projects_img/headphone.jpg";
+import schoolManagement from "@public/images/projects_img/schoolManagement.jpg";
 import {
   FaPhoneAlt,
   FaInstagram,
@@ -178,6 +180,24 @@ export const resumeData = [
 export const projects = [
   {
     id: 1,
+    name: "headphone",
+    type: "static",
+    date: "2022",
+    description: "project description",
+    image: headphone,
+    tech: ["Html", "Css", "Javascript", "Jquery"],
+  },
+  {
+    id: 2,
+    name: "school management",
+    type: "dynamic",
+    date: "2022",
+    description: "project description",
+    image: schoolManagement,
+    tech: ["Python", "Tkinter", "SQL LITE"],
+  },
+  {
+    id: 3,
     name: "interntrack",
     type: "dynamic",
     date: "2023",
@@ -196,22 +216,13 @@ export const projects = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     name: "education",
     type: "static",
     date: "2023",
     description: "project description",
     image: education,
     tech: ["Angular js", "Tailwindcss", "Typescript"],
-  },
-  {
-    id: 3,
-    name: "headphone",
-    type: "static",
-    date: "2022",
-    description: "project description",
-    image: headphone,
-    tech: ["Html", "Css", "Javascript", "Jquery"],
   },
 ];
 
