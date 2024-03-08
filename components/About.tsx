@@ -80,11 +80,11 @@ const About = () => {
           initial={{ y: 0, opacity: 0 }}
           whileInView={{ y: [-15, 0], opacity: 1 }}
           transition={{ duration: 1 }}
-          href="/public/cv.pdf"
+          href="/cv.pdf"
           className="btn-violet py-[10px] px-7 rounded-full shadow-lg shadow-[#1a1b1d] mt-5"
           target="_blank"
           rel="noopener noreferrer"
-          download
+          download="Reynaldo-Bocaling/Portfolio"
         >
           Download Resume
         </motion.a>
