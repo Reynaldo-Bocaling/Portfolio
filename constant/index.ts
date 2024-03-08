@@ -180,6 +180,15 @@ export const resumeData = [
 export const projects = [
   {
     id: 1,
+    name: "education",
+    type: "static",
+    date: "2023",
+    description: "project description",
+    image: education,
+    tech: ["Angular js", "Tailwindcss", "Typescript"],
+  },
+  {
+    id: 2,
     name: "interntrack",
     type: "dynamic",
     date: "2023",
@@ -196,15 +205,6 @@ export const projects = [
       "Mysql",
       "Typescript",
     ],
-  },
-  {
-    id: 2,
-    name: "education",
-    type: "static",
-    date: "2023",
-    description: "project description",
-    image: education,
-    tech: ["Angular js", "Tailwindcss", "Typescript"],
   },
   {
     id: 3,
