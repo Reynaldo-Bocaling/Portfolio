@@ -180,6 +180,24 @@ export const resumeData = [
 export const projects = [
   {
     id: 1,
+    name: "headphone",
+    type: "static",
+    date: "2022",
+    description: "project description",
+    image: headphone,
+    tech: ["Html", "Css", "Javascript", "Jquery"],
+  },
+  {
+    id: 2,
+    name: "school management",
+    type: "dynamic",
+    date: "2022",
+    description: "project description",
+    image: schoolManagement,
+    tech: ["Python", "Tkinter", "SQL LITE"],
+  },
+  {
+    id: 3,
     name: "education",
     type: "static",
     date: "2023",
@@ -188,7 +206,7 @@ export const projects = [
     tech: ["Angular js", "Tailwindcss", "Typescript"],
   },
   {
-    id: 2,
+    id: 4,
     name: "interntrack",
     type: "dynamic",
     date: "2023",
@@ -205,24 +223,6 @@ export const projects = [
       "Mysql",
       "Typescript",
     ],
-  },
-  {
-    id: 3,
-    name: "headphone",
-    type: "static",
-    date: "2022",
-    description: "project description",
-    image: headphone,
-    tech: ["Html", "Css", "Javascript", "Jquery"],
-  },
-  {
-    id: 4,
-    name: "school management",
-    type: "dynamic",
-    date: "2022",
-    description: "project description",
-    image: schoolManagement,
-    tech: ["Python", "Tkinter", "SQL LITE"],
   },
 ];
 
