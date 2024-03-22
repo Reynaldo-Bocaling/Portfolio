@@ -5,6 +5,8 @@ import education from "@public/images/projects_img/education.jpg";
 import interntrack from "@public/images/projects_img/interntrack.jpg";
 import headphone from "@public/images/projects_img/headphone.jpg";
 import schoolManagement from "@public/images/projects_img/schoolManagement.jpg";
+import gradeTracker from "@public/images/projects_img/gradeTracker.jpg";
+
 import {
   FaPhoneAlt,
   FaInstagram,
@@ -187,17 +189,9 @@ export const projects = [
     image: headphone,
     tech: ["Html", "Css", "Javascript", "Jquery"],
   },
+
   {
     id: 2,
-    name: "school management",
-    type: "dynamic",
-    date: "2022",
-    description: "project description",
-    image: schoolManagement,
-    tech: ["Python", "Tkinter", "SQL LITE"],
-  },
-  {
-    id: 3,
     name: "education",
     type: "static",
     date: "2023",
@@ -206,7 +200,7 @@ export const projects = [
     tech: ["Angular js", "Tailwindcss", "Typescript"],
   },
   {
-    id: 4,
+    id: 3,
     name: "interntrack",
     type: "dynamic",
     date: "2023",
@@ -223,6 +217,34 @@ export const projects = [
       "Mysql",
       "Typescript",
     ],
+  },
+  {
+    id: 4,
+    name: "gradeTracker",
+    type: "dynamic",
+    date: "2023",
+    description: "project description",
+    image: gradeTracker,
+    tech: [
+      "ReactJs",
+      "Zustand",
+      "Tailwindcss",
+      "ZOD",
+      "NodeJs",
+      "Express",
+      "Prisma",
+      "Mysql",
+      "Typescript",
+    ],
+  },
+  {
+    id: 5,
+    name: "school management",
+    type: "dynamic",
+    date: "2022",
+    description: "project description",
+    image: schoolManagement,
+    tech: ["Python", "Tkinter", "SQL LITE"],
   },
 ];
 

@@ -20,6 +20,8 @@ const Project = () => {
     activeTab === "All" ? item : item.type == activeTab.toLowerCase()
   );
 
+  console.log("p", projects);
+
   return (
     <div id="project" className="w-full py-16 bg-[#2e2e2e]">
       <div className="max-w-[1124px] mx-auto px-5 flex flex-col gap-8">
