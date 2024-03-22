@@ -76,10 +76,12 @@ const Home = () => {
             </div>
           </motion.div>
           <Image
-            src={HomeModel}
+            src="/images/home.png"
             alt="Home img"
-            className="relative z-30 max-w-[280px] md:max-w-[400px]"
+            className="relative z-30"
             loading="lazy"
+            width={400}
+            height={400}
           />
         </div>
       </div>

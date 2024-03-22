@@ -61,10 +61,10 @@ const Contact = () => {
             <p className="text-2xl font-bold mb-3 ">Get In Touch</p>
             <div className="flex flex-col gap-3">
               <div className="grid grid-cols-2 gap-2">
-                <Input type="email" size="sm" label="Email" />
-                <Input type="email" size="sm" label="Email" />
-                <Input type="email" size="sm" label="Email" />
-                <Input type="email" size="sm" label="Email" />
+                <Input type="text" size="sm" label="From" />
+                <Input type="text" size="sm" label="To" />
+                <Input type="text" size="sm" label="Purpose 1" />
+                <Input type="email" size="sm" label="Purpose 2" />
               </div>
               <Textarea label="Message" size="lg" className="" />
             </div>

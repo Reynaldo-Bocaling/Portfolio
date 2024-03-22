@@ -28,6 +28,7 @@ import {
 import interntrack_project from "@public/images/projects_img/interntrack.jpg";
 import education_project from "@public/images/projects_img/education.jpg";
 import headphone_project from "@public/images/projects_img/headphone.jpg";
+import gradeTarcker_project from "@public/images/projects_img/gradeTracker.jpg";
 
 import html from "@public/images/skills_img/html.png";
 import angular from "@public/images/skills_img/angular.png";
@@ -199,6 +200,25 @@ export const projects = [
   },
   {
     id: 2,
+    name: "GradeTarcker",
+    type: "dynamic",
+    date: "2023",
+    description: "project description",
+    image: gradeTarcker_project,
+    tech: [
+      "ReactJs",
+      "Zustand",
+      "Tailwindcss",
+      "ZOD",
+      "NodeJs",
+      "Express",
+      "Prisma",
+      "Mysql",
+      "Typescript",
+    ],
+  },
+  {
+    id: 3,
     name: "education",
     type: "static",
     date: "2023",
@@ -207,13 +227,22 @@ export const projects = [
     tech: ["Angular js", "Tailwindcss", "Typescript"],
   },
   {
-    id: 3,
+    id: 4,
     name: "headphone",
     type: "static",
     date: "2022",
     description: "project description",
     image: headphone_project,
     tech: ["Html", "Css", "Javascript", "Jquery"],
+  },
+  {
+    id: 5,
+    name: "School Management",
+    type: "dynamic",
+    date: "2022",
+    description: "project description",
+    image: headphone_project,
+    tech: ["Python", "Tkinter", "SQLite"],
   },
 ];
 
